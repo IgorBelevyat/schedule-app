@@ -119,7 +119,7 @@ const LoginModal = ({ onClose, onSuccess }) => {
           {/* Підказка */}
           <div className="mt-4 p-3 bg-gray-50 rounded-xl">
             <p className="text-sm text-gray-600">
-              💡 За замовчуванням: логін <code className="bg-gray-200 px-1 rounded">admin</code>, пароль <code className="bg-gray-200 px-1 rounded">123456</code>
+              💡 За замовчуванням: логін <code className="bg-gray-200 px-1 rounded">admin</code>, пароль <code className="bg-gray-200 px-1 rounded">12345</code>
             </p>
           </div>
         </div>
