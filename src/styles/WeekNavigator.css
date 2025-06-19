@@ -1,0 +1,119 @@
+.week-navigator {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(20px);
+  border-radius: 24px;
+  padding: 32px;
+  margin-bottom: 32px;
+  box-shadow: var(--shadow);
+  animation: fadeIn 0.6s ease-out;
+}
+
+.week-controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.week-button {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--primary-blue) 0%, var(--primary-blue-dark) 100%);
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  box-shadow: var(--shadow);
+  position: relative;
+  overflow: hidden;
+}
+
+.week-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.2) 0%, transparent 100%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.week-button:hover::before {
+  opacity: 1;
+}
+
+.week-button:hover {
+  transform: translateY(-4px) scale(1.05);
+  box-shadow: var(--shadow-lg);
+}
+
+.week-button:active {
+  transform: translateY(-2px) scale(1.02);
+}
+
+.week-info {
+  text-align: center;
+  flex: 1;
+}
+
+.week-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: linear-gradient(135deg, var(--primary-blue-light) 0%, #ddd6fe 100%);
+  color: var(--primary-blue-dark);
+  padding: 8px 20px;
+  border-radius: 12px;
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 12px;
+  border: 1px solid rgba(79, 70, 229, 0.2);
+}
+
+.week-badge-icon {
+  font-size: 16px;
+}
+
+.date-range {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin: 0;
+  background: linear-gradient(135deg, var(--primary-blue) 0%, var(--secondary-blue) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+@media (max-width: 768px) {
+  .week-navigator {
+    padding: 24px 20px;
+    margin-bottom: 24px;
+  }
+
+  .week-controls {
+    gap: 16px;
+  }
+
+  .week-button {
+    width: 48px;
+    height: 48px;
+    font-size: 20px;
+  }
+
+  .date-range {
+    font-size: 18px;
+  }
+
+  .week-badge {
+    font-size: 12px;
+    padding: 6px 16px;
+  }
+}
